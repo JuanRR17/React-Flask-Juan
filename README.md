@@ -1,5 +1,9 @@
 # Steps to initiate the project
 
+# 0 Create a .env file based on the .env.example:
+
+    `$ cp .env.example .env`
+
 # 1 Get the Virtual Environment running
 
     Within project folder:
