@@ -5,7 +5,7 @@ const App = () => {
   const [data, setData] = useState([{}]);
 
   useEffect(() => {
-    fetch(backendURL + "/members")
+    fetch("/members")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -13,7 +13,15 @@ const App = () => {
       });
   }, []);
 
-  return <div>App</div>;
+  return (
+    <div>
+      {typeof data.members === "undefined" ? (
+        <p>Loading...</p>
+      ) : (
+        data.members.map((member, i) => <p key={i}>{member}</p>)
+      )}
+    </div>
+  );
 };
 
 export default App;

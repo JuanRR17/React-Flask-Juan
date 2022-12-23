@@ -20,7 +20,7 @@ def handle_hello():
 def members():
 
     response_body = {
-        "members": ["Members1","Members2","Members3"]
+        "members": ["Member 1","Member 2","Member 3","Member 4"]
     }
 
     return jsonify(response_body), 200
