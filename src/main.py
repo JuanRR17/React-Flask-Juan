@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from flask_migrate import Migrate
 from api.models import db
 from api.routes import api
@@ -29,6 +30,9 @@ MIGRATE = Migrate(app, db, compare_type = True)
 
 # initialize the app with the extension
 db.init_app(app)
+
+# Allow CORS requests to this API
+CORS(app)
 
 # Add all endpoints form the API with a "api" prefix
 app.register_blueprint(api, url_prefix='/api')
