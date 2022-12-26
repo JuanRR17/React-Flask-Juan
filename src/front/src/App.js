@@ -5,7 +5,8 @@ const App = () => {
   const [data, setData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/members")
+    fetch(backendURL + "/members")
+      // fetch("/members")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
