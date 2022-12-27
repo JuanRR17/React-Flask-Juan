@@ -11,6 +11,8 @@ flask-migrate = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 gunicorn = "*"
+importlib-metadata = "*"
+importlib-resources = "*"
 
 [dev-packages]
 
